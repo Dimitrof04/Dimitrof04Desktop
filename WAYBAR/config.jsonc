@@ -1,0 +1,68 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "margin-top": 8,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    // Adicionado "custom/arch" no início da esquerda
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    // Adicionado "bluetooth" na direita
+    "modules-right": ["pulseaudio", "bluetooth", "network", "battery", "tray"],
+
+    "custom/arch": {
+        "format": " 󰣇 ", // Ícone clássico do Arch Linux
+        "tooltip": false,
+        "on-click": "rofi -show drun" // Abre o menu de aplicativos do sistema ao clicar
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "default": ""
+        }
+    },
+    "clock": {
+        "format": "  {:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "󱐋 {icon}  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "network": {
+        "format-wifi": " ", 
+        "format-ethernet": "󰈀 ",
+        "format-disconnected": "󰖪 ",
+        // QUANDO CLICAR: Abre o menu de selecionar Wi-Fi com lista e botão de ligar/desligar
+        "on-click": "networkmanager_dmenu", 
+        "tooltip-format-wifi": "Sinal: {signaldBm}dBm | SSID: {essid}"
+    },
+    "bluetooth": {
+        "format": " ",
+        "format-disabled": "󰂲 ", 
+        "format-connected": "󰂱 {device_alias}",
+        // QUANDO CLICAR: Abre o menu para ligar/desligar e conectar em fones/dispositivos
+        "on-click": "rofi-bluetooth", 
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}"
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟 ",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+    "tray": {
+        "spacing": 10
+    }
+}
