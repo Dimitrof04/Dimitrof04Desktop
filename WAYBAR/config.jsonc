@@ -5,6 +5,7 @@
     "margin-top": 8,
     "margin-left": 10,
     "margin-right": 10,
+    "margin-bottom": -10,
 
     // Adicionado "custom/arch" no início da esquerda
     "modules-left": ["custom/arch", "hyprland/workspaces"],
@@ -15,7 +16,7 @@
     "custom/arch": {
         "format": " 󰣇 ", // Ícone clássico do Arch Linux
         "tooltip": false,
-        "on-click": "rofi -show drun" // Abre o menu de aplicativos do sistema ao clicar
+        "on-click": "hyprlauncher" // Abre o menu de aplicativos do sistema ao clicar
     },
 
     "hyprland/workspaces": {
@@ -42,7 +43,7 @@
         "format-ethernet": "󰈀 ",
         "format-disconnected": "󰖪 ",
         // QUANDO CLICAR: Abre o menu de selecionar Wi-Fi com lista e botão de ligar/desligar
-        "on-click": "networkmanager_dmenu", 
+        "on-click": "$HOME/.config/waybar/soundmenu.lua", 
         "tooltip-format-wifi": "Sinal: {signaldBm}dBm | SSID: {essid}"
     },
     "bluetooth": {

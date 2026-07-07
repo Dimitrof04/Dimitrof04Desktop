@@ -34,7 +34,7 @@ window#waybar {
 }
 
 /* Estilo para os blocos individuais (Efeito cápsula/pill flutuante) */
-#clock,
+#clock ,
 #pulseaudio,
 #network,
 #battery,
@@ -51,14 +51,15 @@ window#waybar {
 #clock {
     color: #ffffff;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 #pulseaudio {
-    color: #a6e3a1; /* Verde */
+    color: #ffffff; /* Verde */
 }
 
 #network {
-    color: #f9e2af; /* Amarelo suave */
+    color: #ffffff; /* Amarelo suave */
     padding: 0 16px; /* Um pouco mais de espaço já que não tem texto */
 }
 
@@ -98,7 +99,7 @@ window#waybar {
 /* Estilo do bloco de Bluetooth */
 #bluetooth {
     background-color: #1e1e2e;
-    color: #89b4fa; /* Azul Celeste */
+    color: #ffffff; /* Azul Celeste */
     padding: 0 14px;
     margin: 4px 3px;
     border-radius: 16px;
