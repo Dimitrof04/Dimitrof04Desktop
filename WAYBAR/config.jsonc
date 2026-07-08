@@ -28,7 +28,7 @@
         }
     },
     "clock": {
-        "format": "  {:%H:%M}",
+        "format": "{:%d/%m 󰸗  %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "battery": {
@@ -39,9 +39,12 @@
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     "network": {
-        "format-wifi": " ", 
-        "format-ethernet": "󰈀 ",
-        "format-disconnected": "󰖪 ",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀  {ipaddr}/{cidr}",
+        "format-linked": "󰈀  {ifname} (No IP)",
+        "format-disconnected": "󰖪  Disconnected", // O que mostra quando desconecta
+        "format-disabled": "󰖪  Disabled",         // O que mostra quando você desliga no botão
+        "tooltip-format": "{ifname} via {gwaddr} ",
         // QUANDO CLICAR: Abre o menu de selecionar Wi-Fi com lista e botão de ligar/desligar
         // "on-click": "$HOME/.config/waybar/NetworkWindow.py", 
         "tooltip-format-wifi": "Sinal: {signaldBm}dBm | SSID: {essid}"
