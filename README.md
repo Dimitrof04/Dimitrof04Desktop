@@ -26,7 +26,8 @@ sudo pacman -S hyprland waybar hyprlauncher kitty awww
 # if you install before, you dont need istall again
 
 #I recomend but if you dont want
-sudo pacman -S cmatrix cava hyprlock 
+sudo pacman -S cmatrix cava fastfetch asciiquarium hyprlock
+yay -S pipes.sh lavat peaclock
 
 git clone https://github.com/Dimitrof04/Dimitrof04Desktop.git
 cd Dimitrof04Desktop
