@@ -12,11 +12,11 @@ A sleek, minimalist, and highly optimized Hyprland configuration.
 This Hyprland environment is built using the following core software:
 
 * **Window Manager:** [Hyprland](https://hyprland.org/) *(Dynamic tiling Wayland compositor)*
-* **Status Bar:** Waybar
+* **Status Bar:** [waybar] (https://waybar.org/) *(Waybar or Taskbar)*
 * **App Launcher:** Rofi (Wayland fork) / Wofi
 * **Terminal Emulator:** Kitty
 * **Notification Daemon:** Dunst / Mako
-* **Wallpaper Manager:** Hyprpaper
+* **Wallpaper Manager:** awww
 * **Screen Locker:** Hyprlock
 
 ---
@@ -26,8 +26,11 @@ This Hyprland environment is built using the following core software:
 
 ### How installand?
 ```bash
-sudo pacman -S hyprland waybar rofi-wayland kitty
+sudo pacman -S hyprland waybar hyprlauncher kitty awww
 # if you install before, you dont need istall again
+
+#I recomend but if you dont want
+sudo pacman -S cmatrix cava hyprlock 
 
 git clone https://github.com/Dimitrof04/MyHyprland.git
 cd MyHyprland
