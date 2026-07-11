@@ -54,7 +54,7 @@
         "format-disabled": "󰂲 ", 
         "format-connected": "󰂱 {device_alias}",
         // QUANDO CLICAR: Abre o menu para ligar/desligar e conectar em fones/dispositivos
-        "on-click": "rofi-bluetooth", 
+        "on-click": "$HOME/.config/waybar/BluetoothMenu", 
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}"
     },
